@@ -1,0 +1,66 @@
+.headerContainer {
+    
+    @include displayFlex(space-between, center, ){
+        flex-wrap: nowrap;
+
+    }
+    box-sizing: border-box;
+    @include normalizeScreen();
+    background: $backgroundHeaderColor;
+    padding: 10px 10px 10px 10px;
+    .containerLogoHeader {
+        @include normalizeScreen(30%, );
+        #logoHeader {
+            max-width: 10vw;
+            height: 7vh;
+        }
+    }
+
+    .containerSearch {
+        @include displayFlex ();
+        @include normalizeScreen (40%, 65% );
+        margin: 0 auto;
+        #search {
+            @include normalizeScreen();
+            @include globalBorder (){
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            };
+            background: $backgroundHeaderColor;
+            font-size: 1.2rem;
+            
+
+            padding: 0 10px;
+
+            &:focus {
+                border: solid 1px $borderLineColor;
+                
+            }
+        }
+
+        .iconSearch{
+            @include normalizeScreen (10%, 100% );
+            @include globalBorder (){
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            };
+            @include displayFlex (center, center, );
+            img {
+                @include normalizeScreen (45%, 45%);
+            }
+        }
+    }
+
+    .LogoRedes {
+        @include normalizeScreen (30%, );
+        @include displayFlex (end, );
+        gap: 5px;
+        a {
+            @include globalBorder (){
+                border-radius: 100%;
+            };
+        }
+       
+    }
+
+}

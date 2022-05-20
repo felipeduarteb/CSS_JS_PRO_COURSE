@@ -1,0 +1,24 @@
+.videoContainer {
+    @include displayFlex($direction: column);
+    .mainVideo {
+        @include normalizeScreen(98%, 80vh);
+
+        @include device (mobile){
+            @include normalizeScreen (98%, 20vh);
+        }
+        @include device (tablet){
+            @include normalizeScreen (98%, 40vh);
+        }
+        #ytplayer {
+            @include normalizeScreen();
+        }
+    }
+    .videoDescription {
+        
+        .titleVideoDescription {
+            padding: 16px;
+            font-size: 1.5rem;
+            line-height: 2.6rem;
+        }
+    }
+}

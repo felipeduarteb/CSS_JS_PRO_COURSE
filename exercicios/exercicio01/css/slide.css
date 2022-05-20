@@ -1,0 +1,25 @@
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.slide {
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.slide-items {
+    position: relative;
+}
+.slide-items > * {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.slide-items > .active {
+    position: relative;
+    pointer-events: initial;
+    opacity: 1;
+}   

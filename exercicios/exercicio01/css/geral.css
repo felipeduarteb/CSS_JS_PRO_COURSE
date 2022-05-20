@@ -1,0 +1,60 @@
+:root {
+    --boxWidth: 15vw;
+    --boxHeight: 15vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+body, .container {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background: #001F3A;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, var(--boxWidth));
+    grid-template-rows: repeat(2, var(--boxHeight));
+    gap: 3vw;
+}
+
+.quadro1 {
+    background: #FF912E;
+}
+
+.quadro2 {
+    background: #870093;
+}
+
+.quadro3 {
+    background: #00396B;
+}
+
+.quadro4 {
+    background: #00396B;
+}
+
+.quadro5 {
+    background: #FFFFFF;
+}
+
+.quadro4, .quadro5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16vw;
+}
+
+.textPrimeiro, .textNegado {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.textNegado {
+    color: red;
+} 

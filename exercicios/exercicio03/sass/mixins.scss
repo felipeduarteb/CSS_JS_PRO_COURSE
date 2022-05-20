@@ -1,0 +1,44 @@
+@mixin borderTest ($cor: red){
+    border: solid 2px $cor;
+}
+
+@mixin device ($sizeDevice){
+    @if $sizeDevice == mobile {
+        @media (min-width: 0px) and (max-width: 378px) {
+            @content;
+        }
+    } @else if $sizeDevice == tablet {
+        @media (min-width: 379px) and (max-width: 840px){
+            @content;
+        }
+    } @else if $sizeDevice == web {
+        @media (min-width: 840px) {
+            @content;
+        }
+    }
+}
+
+@mixin displayGrid ($column: 8, $sizeColumn: 1fr, $row: auto){
+    display: grid;
+    grid-template-columns: repeat($column, $sizeColumn);
+    grid-template-rows: $row;
+}
+
+@mixin normalizeScreen ($normalizeWidth: 100%, $normalizeHeight: 100%){
+    width: $normalizeWidth;
+    height: $normalizeHeight;
+}
+
+@mixin displayFlex ($justify: flex-start, $align: center, $direction: row){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    @content;
+}
+
+@mixin globalBorder ($borderSize: 1px){
+    border: solid $borderSize $borderLineColor;
+    @content;
+}
+

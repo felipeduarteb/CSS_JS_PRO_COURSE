@@ -1,0 +1,22 @@
+.relatedContainer {
+    
+    margin: 0 auto;
+    .relatedVideoList {
+        gap: 20px;
+        @include normalizeScreen();
+        @include displayFlex($direction: column);
+        li {
+            @include normalizeScreen();
+            @include displayFlex(center, center, );
+            .relatedVideo {
+                box-sizing: border-box;
+                @include normalizeScreen();
+                iframe {
+                    @include normalizeScreen();
+                }
+
+            }
+        }
+    }
+
+}

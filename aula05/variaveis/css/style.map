@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.scss"
+	],
+	"sourcesContent": [
+		"$cor-primaria: #ffb92f;\r\n$cor-fundo: #fff;\r\n\r\nbody {\r\n    width: 100vw;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    background: $cor-fundo;\r\n}\r\nmain {\r\n    max-width: 500px;\r\n}\r\nh1 {\r\n    color: $cor-fundo;\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAGA,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,UAAU,EAPF,IAAI;CAQf;;;AACD,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,KAAK;CACnB;;;AACD,AAAA,EAAE,CAAC;EACC,KAAK,EAbG,IAAI;CAcf"
+}

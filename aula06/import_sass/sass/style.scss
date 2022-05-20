@@ -1,0 +1,36 @@
+@import "reset";
+@import "variaveis";
+@import "colors";
+
+
+
+body {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+main {
+    max-width: 500px;
+}
+h1 {
+    font-family: $font-primaria;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background: $cor-primaria;
+    padding: 10px;
+    color: $texto-botao;
+    font-weight: bold;
+    font-family: $font-primaria;
+}
+
+p {
+    color: $cor-texto;
+    font-size: 18px;
+    font-weight: 400px;
+    font-family: $font-primaria;
+    margin-bottom: $gutter;
+}

@@ -1,0 +1,62 @@
+@import 'reset.scss';
+@import 'variveis.scss';
+@import 'mixins.scss';
+@import 'header.scss';
+@import 'videoContent.scss';
+@import 'relatedVideos.scss';
+
+body, .container {
+    @include normalizeScreen();
+    box-sizing: border-box;
+    font-family: $fontPrimary;
+}
+
+.container {
+    gap: 20px;
+    background: $backgroundContentColor;
+}
+
+@include device (mobile) {
+    .container {
+        @include displayGrid (1, 1, repeat(12 1fr));
+    }  
+    .headerContainer {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .videoContainer {
+        grid-area: 2 / 1 / 11 / 2;
+    }
+    .relatedContainer {
+        grid-area: 11 / 1 / 13 / 2;
+    }
+}
+
+@include device (tablet) {
+    .container {
+        @include displayGrid (1, 1, repeat(12, 1fr));
+    } 
+    .headerContainer {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .videoContainer {
+        grid-area: 2 / 1 / 11 / 2;
+    }
+    .relatedContainer {
+        grid-area: 11 / 1 / 13 / 2;
+    }
+}
+
+@include device (web) {
+    .container {
+        @include displayGrid ();
+    }
+    .videoContainer {
+        grid-area: 2 / 1 / 13 / 7;
+    }
+    .headerContainer {
+        grid-area: 1 / 1 / 2 / 9;
+    }
+    .relatedContainer {
+        grid-area: 2 / 7 / 13 / 9;
+    }
+}
